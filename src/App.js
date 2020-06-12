@@ -108,7 +108,7 @@ class App extends Component {
 					<p className="text-green">Hi, I am</p>
 					<h1>Kaushik <span className="text-green">Bhat</span></h1>
 					<div className="contact">
-						<span><i className="fa fa-envelope"></i></span>&nbsp;<a className="title-mail" href="mailto:kaushikbhat.98@gmail.com">kaushikbhat.98@gmail.com</a> | <span><i className="fa fa-phone"></i></span>&nbsp;<a href="tel:8073456921" className="text-white title-phone">+918073456921</a>
+						<span><i className="fa fa-envelope"></i></span>&nbsp;<a className="title-mail" href="mailto:kaushikbhat.98@gmail.com">kaushikbhat.98@gmail.com</a> | <span><i className="fa fa-phone"></i></span>&nbsp;<a href="tel:8073456921" className="text-tel title-phone">+918073456921</a>
 					</div>
 				</div>
 				<div className="social-parent">
