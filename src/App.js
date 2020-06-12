@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
+import 'font-awesome/css/font-awesome.min.css';
 import './App.css';
 
 class App extends Component {
@@ -7,24 +8,28 @@ class App extends Component {
 		super(props);
 
 		this.state = {
-			particles_value: 80
+			particles_value: null,
+			isOpen: false											
 		};
 	}
+	// toggle = () => {
+	// 	this.setState({ isOpen: !this.state.isOpen });
+	// }
 
 	render() {
+		var value = 0;
 		if (window.screen.width > 1400) {
-			this.state.particles_value = 130;
+			value = 110;
 		}
 		else if (window.screen.width > 1100 && window.screen.width < 1400) {
-			this.state.particles_value = 100;
+			value = 90;
 		}
 		else if (window.screen.width > 800 && window.screen.width < 1100) {
-			this.state.particles_value = 90;
+			value = 85;
 		}
 		else {
-			this.state.particles_value = 75;
+			value = 85;
 		}
-		console.log(window.screen.width);
 		return (
 			<div className="App">
 				<div className="home">
@@ -34,11 +39,11 @@ class App extends Component {
 								"line_linked": {
 									"enable": true,
 									"color": "#ffffff",
-									"opacity": 0.8,
+									"opacity": 0.5,
 									"width": 1,
 								},
 								"number": {
-									"value": this.state.particles_value,
+									"value": value,
 									"density": {
 										"enable": true,
 										"value_area": 800
@@ -90,7 +95,7 @@ class App extends Component {
 								},
 								"modes": {
 									"repulse": {
-										"distance": 130,
+										"distance": 140,
 										"duration": 0.4
 									},
 								},
@@ -102,16 +107,19 @@ class App extends Component {
 				<div className="title">
 					<p className="text-green">Hi, I am</p>
 					<h1>Kaushik <span className="text-green">Bhat</span></h1>
+					<div className="contact">
+						<span><i className="fa fa-envelope"></i></span>&nbsp;<a className="title-mail" href="mailto:kaushikbhat.98@gmail.com">kaushikbhat.98@gmail.com</a> | <span><i className="fa fa-phone"></i></span>&nbsp;<a href="tel:8073456921" className="text-white title-phone">+918073456921</a>
+					</div>
 				</div>
 				<div className="social-parent">
 					<div className="social-links">
 						<div class="social-container">
 							<ul class="social-icons">
-								<li><a target="_blank" rel="noopener noreferrer" href="https://instagram.com/kaush.ikk"><i class="fa fa-instagram"></i></a></li>
-								<li><a target="_blank" rel="noopener noreferrer" href="https://github.com/kaushikbhat07"><i class="fa fa-github"></i></a></li>
-								<li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/kaushikbhat7/"><i class="fa fa-linkedin"></i></a></li>
-								<li><a target="_blank" rel="noopener noreferrer" href="https://wa.me/8746085201?text=Hello%20Kaushik%21"><i class="fa fa-whatsapp"></i></a></li>
-								<li><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1aOJ90h1l99RmGYQx27VuyZAVFXxVE6oA/view?usp=sharing"><i class="fa fa-briefcase"></i></a></li>
+								<li id="TooltipInsta"><a target="_blank" rel="noopener noreferrer" href="https://instagram.com/kaush.ikk"><i class="fa fa-instagram"></i></a></li>
+								<li id="TooltipGithub"><a target="_blank" rel="noopener noreferrer" href="https://github.com/kaushikbhat07"><i class="fa fa-github"></i></a></li>
+								<li id="TooltipLinkedin"><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/kaushikbhat7/"><i class="fa fa-linkedin"></i></a></li>
+								<li id="TooltipWhatsapp"><a target="_blank" rel="noopener noreferrer" href="https://wa.me/918746085201?text=Hello%20Kaushik%21"><i class="fa fa-whatsapp"></i></a></li>
+								<li id={"Tooltip-" + 2}><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1aOJ90h1l99RmGYQx27VuyZAVFXxVE6oA/view?usp=sharing"><i class="fa fa-briefcase"></i></a></li>							
 							</ul>
 						</div>
 					</div>

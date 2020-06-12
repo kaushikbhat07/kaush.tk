@@ -26,7 +26,7 @@ ul {
     width: 100%;
     height: 100%;
     background-color: #111111;
-    background-image: url("/img/2.jpg");
+    background-image: url("img/2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,23 +38,42 @@ canvas {
     width: 100%;
     height: 100%;
 }
+.contact {
+    position: absolute;
+    z-index: 99;
+    left: 0%;
+    top: 100%;
+}
+.contact > span {
+    color: rgb(2, 212, 99);
+}
+.contact .title-mail {
+    color: #d3d3d3;
+}
 .title {
     position: absolute;
     z-index: 99;
-    top: 30%;
+    top: 27%;
     left: 4%;
 }
-.title p {
+.title p, .title a, .contact .title-mail, .contact .title-phone {
     font-family: 'Source Code Pro', monospace;
     text-shadow: black 0px 0px 10px;
+    text-decoration: none;
 }
-
+.title .title-mail {
+    color: #bcb8b1;
+}
+.text-white {
+    color: #bcb8b1;
+}
 .title h1 {
     margin: 0;
     font-family: 'Work Sans', sans-serif;
     letter-spacing: 4px;
     font-size: 78px;
     font-weight: 700;
+    color: #f8edeb;
     text-shadow: black 0px 0px 10px;
     text-transform: uppercase;
 }
@@ -133,12 +152,15 @@ canvas {
     transition: all 265ms ease-in;
 }
 .social-parent {
-    margin-top: 3%;
+    margin-top: 5%;
 }
 
 @media only screen and (max-width: 551px) {
+    .title h1 {
+        font-size: 65px;
+    }
     .social-parent {
-        margin-top: 12%;
+        margin-top: 18%;
     }
     .social-icons a:before {
         width: 43px;
@@ -149,15 +171,33 @@ canvas {
         top: 12px;
         left: 13px;
     }
+    .contact {
+        top: 100%;
+        left: 0%;
+    }
 }
-
-@media only screen and (max-width: 654px) {
+@media only screen and (max-width: 512px) {
+    .social-parent {
+        margin-top: 25%;
+    }
+}
+@media only screen and (max-width: 654px) and (min-width: 551px) {
     .title h1 {
         font-size: 65px;
     }
+    .contact {
+        top: 100%;
+        left: 0%;
+    }
 }
 /* XS */
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 375px) {
+    .social-parent {
+        margin-top: 30%;
+    }
+    .title h1 {
+        font-size: 58px;
+    }
     .social-icons a:before {
         width: 40px;
         height: 40px;
