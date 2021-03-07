@@ -1,4 +1,4 @@
-Don't really have any fancy projects to create and showcase in a portfolio of my own, so decided to go with a simple one page site with links to my social media :grin:
+Don't really have any fancy projects showcase in a portfolio of my own, so decided to go with a simple one page site with links to my social media :grin:
 
 Deployed at: https://kaush.tk
 
